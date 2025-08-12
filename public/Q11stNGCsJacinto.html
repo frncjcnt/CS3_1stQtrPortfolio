@@ -1,10 +1,18 @@
 <body>
     <p> meowmeowmeowmeow !!! </p>
     <script>
-       var age=14
-       var maxAge=100
-       var numPerDay=5
-       var totalRequired = (numPerDay * 365) * (maxAge - age)
-       document.write ("You will need " + totalRequired + " shots of espresso to last you until the ripe old age of " + maxAge)
+       let age= window.prompt("What is your age?", "14");
+       let snack = window.prompt("What is your favorite snack?", "Coffee");
+       let numPerDay = window.prompt("How many units of this snack do you eat per day?", "5");
+       let maxAge = window.prompt("How old do you wish to live to?", "100");
+       let check = window.confirm(`Are you sure this is all correct? Age = ` + age + `, Snack = ` + snack + `, #/day = ` + numPerDay + `, Expected Age = ` + maxAge)
+       if (check){
+        var totalRequired = (numPerDay * 365) * (maxAge - age)
+        document.write(`You will need ` + totalRequired + ` units of ${snack} to last you until the ripe old age of ` + maxAge) 
+       }
+       else{
+        window.alert("Run the code again");
+       }
+
     </script>
 </body> 
