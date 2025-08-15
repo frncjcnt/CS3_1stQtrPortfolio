@@ -1,11 +1,18 @@
-<script>
-    let name = window.prompt("Have you gotten over her? ", "Anika Fabia");
-let sure =  window.confirm(`have you really not gotten over ${name}?`)
-if (sure){
-    console.log("Move on bro she's gay")
-}
-else {
-    console.log("Yieeee")
-}
+<!DOCTYPE html>
+</html>
+<body>
+    <h2>Sample use of input tag</h2>
+    <label> What is your greeting?
+        <input id="greeting"/>
+    </label>
+ 
+    <button onclick="checkGreet()" >Show Greeting </button></p>
+    <p> Result: <span id="Greet"></span> </p>
+        <script>
+            function checkGreet(){
+                let dGreet = document.getElementById("greeting").value
+                greet.innerHTML = `<p> <b> ${dGreet} </b> </p>`
+            }
 
-</script>
+        </script>
+<html>
