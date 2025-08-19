@@ -2,21 +2,33 @@
 <html>
     <body>
         <h2>Q1 2nd Graded Exercise submitted by Franco Jacinto of 9-Cesium</h2>
-        <label> Meal Price
+        <label> Meal Price 
             <input id="mp"/>
         </label>
-        <label> Tip
+        <label>  <br> Tip
             <input id="tip"/>
         </label>
-        <label> Service Charge
+        <label> <br> % Service Charge
             <input id="sc"/>
         </label><br>
         <button onclick = "totalMeal()"> Accept Input </button> </p>
-        <p>Result: <span id="charge"> </span> </p>
+        <p>Total Meal: <span id="charge"> </span> </p>
         <script>
             function totalMeal(){
+                let mp = parseFloat(document.getElementById("mp").value);
+                let tip = parseFloat(document.getElementById("tip").value);
+                let sc = parseFloat(document.getElementById("sc").value);
+
+                let totalCost = mp + tip + (sc / 100 * mp);
                 
+                document.getElementById("charge").innerHTML = totalCost.toFixed(2);
             }
         </script>
+        <footer>
+            Additional Sources aside from KHub: <br>
+            HTMLInputElement: value property - Web APIs | MDN. (2025, April 22). MDN Web Docs. https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/value <br>
+            ParseFloat() - JavaScript | MDN. (2025, July 8). MDN Web Docs. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat <br>
+            W3Schools.com. (n.d.). https://www.w3schools.com/jsref/jsref_tofixed.asp <br>
+        </footer>
     </body>
 </html>
